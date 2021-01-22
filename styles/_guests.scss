@@ -12,6 +12,7 @@
     max-width: 1440px;
     height: 837.24px;
     
+    & img{@include imginvitados();}
     
     #titinv{
         grid-column: 1/4;
@@ -23,7 +24,7 @@
     
 
     
-    #imginv{@include imginvitados();}
+    /*#imginv{@include imginvitados();}*/
     
     
 }

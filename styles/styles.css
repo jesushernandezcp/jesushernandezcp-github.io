@@ -380,6 +380,13 @@ header .checkbox__hack {
       grid-template-rows: 0.3fr 1fr 1fr;
   max-width: 1440px;
   height: 837.24px;
+  /*#imginv{@include imginvitados();}*/
+}
+
+.invitados img {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
 }
 
 .invitados #titinv {
@@ -392,12 +399,6 @@ header .checkbox__hack {
       -ms-flex-pack: center;
           justify-content: center;
   padding-left: 150px;
-}
-
-.invitados #imginv {
-  width: 100%;
-  height: 100%;
-  margin: 0%;
 }
 
 @media screen and (max-width: 540px) {
