@@ -1,0 +1,142 @@
+
+/*Estilos del titulo*/
+
+.bienvenida{ 
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 1440px;
+    margin-top: 10%;
+    padding-left: 150px;
+    #hello{
+    
+        font-family:  'IBM Plex Sans', sans-serif;
+        font-size: 64px;
+        color: #060A24;
+        letter-spacing: 0;
+        text-align: left;
+        width: auto;
+        
+        span{
+        
+            font-family:  'IBM Plex Sans', sans-serif;
+            font-size: 64px;
+            text-decoration: line-through;
+            color: #060A24;
+            letter-spacing: 0;
+        }
+    
+    }
+    
+    #hello::after{
+        font-family: IBMPlexSans;
+        font-size: 64px;
+        color: #0000EC;
+        letter-spacing: 0;
+        content:".";
+    }
+    #firstp{
+        
+        position: relative;
+        font-family: var(--primary-font);
+        font-size: 16px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 24px;
+        display: flex;
+        max-width: 628px;
+        
+    }
+
+    #secondp{
+        visibility: hidden;
+        
+    }
+
+    button:hover{background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);}
+    button{
+        /*propiedades del boton*/
+        border: transparent;
+        width: 226px;
+        height: 56px;
+        background: #00F3BB;
+        position: relative;
+        margin-top: 1.4%;
+        
+        
+        /*propiedades del texto*/
+        
+        padding: 0.4% 4.1%;
+        font-family: var(--primary-font);
+        font-size: 18px;
+        color: #060A24;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 24px;
+           
+    
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+
+
+    .bienvenida{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 15px;
+        width: 320px; 
+        height: 300px;
+        font-size: 36px;
+        padding: unset;
+        
+        #hello{
+            width: 250px;
+            font-size: 36px;
+            
+            line-height: 35px;
+            span{font-size: 36px;}
+        }
+        #hello::after{
+            font-family: IBMPlexSans;
+            font-size: 64px;
+            color: black;
+            letter-spacing: 0;
+            content:".";
+        }
+            #firstp{
+                width: 288px; 
+                height: auto;
+                padding: 5px;
+                visibility: hidden;
+                font-size: 14px;
+
+            }
+            #secondp{
+                visibility: visible; 
+                position: absolute;
+                width: auto; 
+                height: auto;
+                font-family: var(--primary-font);
+                font-size: 14px;
+                color: #060A24;
+                letter-spacing: 0;
+                line-height: 22px;
+                
+                margin-top: 0px;
+                font-size: 14px;
+                
+            }
+            button{
+                top: -10px;
+                width: 288px;
+                height: 48px;
+                margin: 0%;
+                
+            }
+                
+        
+        
+        }
+}

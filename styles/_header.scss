@@ -1,0 +1,159 @@
+
+header{
+    max-width: 1440px;
+    padding: 20px 120px 20px 20px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    
+    img{
+        margin-left: 60px;
+        width: 36px;
+        height: 36px;
+        }
+
+    .checkbox-hack__label{visibility: hidden;}
+    .checkbox__hack {visibility: hidden;}
+    
+        }
+
+    
+    
+    
+    .menu{
+        
+        display: flex;
+        
+        ul{
+            a:hover{color: #00F3BB; text-decoration: line-through;}
+            a:active{color: rgba(6,10,36,0.56); text-decoration: line-through;}
+            li{ 
+                display: inline-flex;
+                font-family: var(--primary-font);
+                color: #060A24;
+                letter-spacing: 0;
+                line-height: 28px;
+                padding-right: 50px;    
+                
+                a{
+                    text-decoration: none;
+                    color: #060A24;
+                    
+                }
+            }        
+        }
+    }
+
+
+    
+    .menu:after{
+        content: "☰";
+        visibility: hidden;
+        
+      }
+      
+       
+
+        
+    
+
+
+
+//CONFIGURACION PARA MOBILE
+
+@media screen and (max-width: 812px)
+{
+    header{
+        min-width: 320px;
+        padding: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: unset;
+        
+        img{
+            margin-left: 0px;
+            width: 24px;
+            height: 24px;
+            }
+
+        
+
+        .checkbox-hack__label{
+            visibility: unset;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 90%;
+            height: 20px;
+            color: white;
+            overflow: visible;
+            cursor: pointer;
+            margin: 0;
+            z-index: 100;
+                        
+            
+        }    
+        .menu:after{
+            content: "☰";
+            font-size: 1.5em;
+            width: 14px;
+            height: 14px;
+            line-height: 1;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 85%;
+            margin-top: -6px;
+            margin-left: -4px;
+            visibility: visible;
+            
+            }
+
+        ul{
+            margin-top: 10px;
+            display: none;
+            
+        }
+            
+            
+        }
+        
+}
+    
+
+
+    
+.checkbox__hack:checked ~ 
+                .menu::after {
+                                    content: "x";
+                                    font-family: var(--primary-font);    
+                                    top: 5%;
+                                    
+                                }
+   
+.checkbox__hack:checked ~ 
+                .menu {
+                            overflow: visible;  
+            
+                            ul{
+                                display:flex; 
+                                flex-direction: column;
+                                background: #0000EC;
+                                color: white;
+                                transform: translate(-62px,20%);
+                                
+                                
+                                li{ 
+                                    font-family: var(--primary-font);
+                                    width: 320px;
+                                    height: 22.9%;
+                                    font-size: 16px;
+                                    color: #FFFFFF;
+                                    letter-spacing: 0;
+                                    line-height: 28px;    
+                                    padding-left: 20px;    
+                                }
+                                }
+                            }

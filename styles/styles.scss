@@ -1,0 +1,40 @@
+@import "welcome";
+@import "episodes";
+@import "header";
+@import "guests";
+@import "topics";
+@import "novedades";
+@import "footer";
+@import "us";
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    max-width: 1440x;
+    
+
+}
+
+::-webkit-scrollbar{display: none;}
+:root{
+
+    --primary-font:'IBM Plex Mono', monospace;
+    --secondary-font:'IBM Plex Sans', sans-serif;
+}
+
+.bodycontainer{ 
+    max-width: 1440px;
+    min-width: 320px;
+    
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}

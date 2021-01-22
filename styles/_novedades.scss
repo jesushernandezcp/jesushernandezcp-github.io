@@ -1,0 +1,84 @@
+.novedades{
+    border:1px solid black;
+    max-width: 1440px;
+    height: 418px;
+    margin-top: 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+    position: relative;
+    
+    
+    h2{
+        display: block;
+        position: relative;
+        font-family:  'IBM Plex Sans', sans-serif;
+        font-size: 48px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        
+        max-width: 692px;
+        max-height: 46px;
+        padding-top: 150px;
+    
+    }
+
+    button{
+        background: #00F3BB;
+        margin-top: 100px;
+        
+        position: relative;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 18px;
+        color: #060A24;
+        letter-spacing: 0;
+        text-align: center;
+        line-height: 24px;
+        width: 345px;
+        height: 56px;
+
+        
+    }
+}
+@media screen and (max-width: 682px)
+{
+
+    .novedades{
+        margin-top: 10%;
+        min-width: 320px; 
+        height: 341px;
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+        
+
+        h2{
+            min-width: 288px; 
+            min-height: 126px;
+            font-family:  'IBM Plex Sans', sans-serif;
+            font-size: 36px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 42px;
+            padding: unset;
+            margin-top: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        button{
+            width: 288px; 
+            height: 48px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 16px;
+            color: #060A24;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 22px;
+            position: relative;
+            margin-top: 20px;
+            
+        }
+    }
+}
