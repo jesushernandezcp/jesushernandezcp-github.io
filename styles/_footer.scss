@@ -6,7 +6,11 @@ footer{
     align-items: center;
     padding: 0px 50px 0px 50px;
     
+#certificado{
+    display: block;
 
+    position: absolute;
+    visibility: hidden;}
 #pfooter{
 display: flex;    
 width: auto;
@@ -48,7 +52,7 @@ line-height: 28px;
         .icons{margin-top: 15px; padding-bottom: 35px;}
 
         #pfooter{min-width: 220px;}
-
+        #certificado{visibility: unset; position: relative;}
         
         
             }

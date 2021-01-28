@@ -12,11 +12,11 @@
     max-width: 1440px;
     height: 837.24px;
     
-    & img{@include imginvitados();}
+    
     
     #titinv{
         grid-column: 1/4;
-        font-family:  'IBM Plex Sans', sans-serif;
+        font-family: var(--secondary-font);
         font-size: 48px;
         justify-content: center;
         padding-left: 150px;
@@ -28,21 +28,25 @@
     
     
 }
+.invitados img{@include imginvitados();padding: 0px;}
 
 @media screen and (max-width: 540px)
 {
     .invitados{
         display: flex;
+        position: relative;
         flex-direction: column;
         height: unset;
         
         #titinv{
-            width: 288px; 
+            width: 288px;
+            padding: unset; 
             height: 84px; 
             margin-left: 5%;
             font-size: 36px;
             margin-bottom: 7%;
         }
+        img{padding: unset;}
 
     }
     
