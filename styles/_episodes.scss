@@ -7,7 +7,8 @@
 
 /*Contenedor principal*/
 .episodios{
-    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    /*background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);*/
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
     max-width: 1440px;
     height: 1042.6px;
     display: grid;
@@ -15,6 +16,7 @@
     grid-template-rows: 0.7fr 0.7fr 1fr;
     clip-path: polygon(0 13%, 100% 2%, 100% 88%, 0 100%);
     position: relative;
+    
 
            
     #titepisodes{
@@ -55,12 +57,13 @@
 {
     
     .episodios{
-                min-width: 320px;
+                width: 320px;
                 height: 1220px;
                 clip-path: polygon(0 5%, 100% 2%, 100% 97%, 0 100%);
                 display: flex;
                 flex-direction: column;
-
+                border: none;
+                
 
                 iframe{
                     width: 310px; 
@@ -71,17 +74,17 @@
                     
                 }
 
-                h2{
+                #titepisodes{
                     font-family: 'IBM Plex Sans', sans-serif;
-                    width: fit-content;
-                    height: auto;
+                    width: 157px;
+                    height: 42px;
                     margin-left: 3.4%;
                     margin-top: 25%;
                     font-size: 36px;
                     color: #FFFFFF;
                     letter-spacing: 0;
                     line-height: 42px;
-                
+                    
                 }
                 
 
