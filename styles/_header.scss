@@ -1,6 +1,7 @@
 
 header{
-    max-width: 1440px;
+    /*max-width: 1440px;*/
+    width: 100%;
     padding: 20px 120px 20px 20px;
     display: flex;
     position: relative;
@@ -14,8 +15,8 @@ header{
         height: 36px;
         }
 
-    .checkbox-hack__label{visibility: hidden;}
-    .checkbox__hack {visibility: hidden;}
+    .checkbox__label{visibility: hidden;}
+    .checkbox{visibility: hidden;}
     
         }
 
@@ -26,7 +27,9 @@ header{
         
         display: flex;
         
+        justify-content: right;
         ul{
+            
             a:hover{color: #00F3BB; text-decoration: line-through;}
             a:active{color: rgba(6,10,36,0.56); text-decoration: line-through;}
             li{ 
@@ -80,7 +83,7 @@ header{
 
         
 
-        .checkbox-hack__label{
+        .checkbox__label{
             visibility: unset;
             position: absolute; 
             top: 0;
@@ -93,6 +96,7 @@ header{
             cursor: pointer;
             margin: 0;
             z-index: 100;
+            
                         
             
         }    
@@ -127,15 +131,15 @@ header{
 
 
     
-.checkbox__hack:checked ~ 
-                .menu::after {
+.checkbox:checked ~ 
+                .menu:after {
                                     content: "x";
                                     font-family: var(--primary-font);    
-                                    top: 5%;
+                                    top: 0%;
                                     
                                 }
    
-.checkbox__hack:checked ~ 
+.checkbox:checked ~ 
                 .menu {
                             overflow: visible;  
                             
@@ -145,7 +149,8 @@ header{
                                 flex-direction: column;
                                 background: #0000EC;
                                 color: white;
-                                transform: translate(-40px,20%);
+                                transform: translate(-57px,20%);
+                                width: 100vw;
                                 
                                     
                                 
