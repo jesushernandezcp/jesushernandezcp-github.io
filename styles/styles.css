@@ -1,5 +1,11 @@
 @charset "UTF-8";
-/*Estilos del titulo*/
+/*Esta seccion incluye los siguientes elementos: 
+CONTENEDOR PRINCIPAL---.bienvenida
+TITULO BIENVENIDA---#hello,span 
+PARRAFO 1---#firstp 
+PARRAFO 2---#secondp
+BOTON---.conoce_mas
+*/
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap");
@@ -14,7 +20,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /*max-width: 1440px;*/
   margin-top: 10%;
   padding-left: 150px;
 }
@@ -61,18 +66,19 @@
   visibility: hidden;
 }
 
-.bienvenida button {
-  /*propiedades del boton*/
+.bienvenida .conoce_mas {
   border: none;
-  max-width: 255px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 226px;
   max-height: 56px;
   min-height: 48px;
   background: #00F3BB;
   position: relative;
   margin-top: 1.4%;
   outline: transparent;
-  /*propiedades del texto*/
-  padding: 0.4% 4.1%;
+  padding: 1.5% 4.1%;
   font-family: var(--primary-font);
   font-size: 18px;
   font-weight: bold;
@@ -80,9 +86,10 @@
   letter-spacing: 0;
   text-align: center;
   line-height: 24px;
+  text-decoration: none;
 }
 
-.bienvenida button:hover {
+.bienvenida .conoce_mas:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   color: white !important;
 }
@@ -111,7 +118,7 @@
   }
   .bienvenida #hello::after {
     font-family: IBMPlexSans;
-    font-size: 64px;
+    font-size: 36px;
     color: black;
     letter-spacing: 0;
     content: ".";
@@ -126,8 +133,11 @@
   .bienvenida #secondp {
     visibility: visible;
     position: absolute;
-    width: auto;
-    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 288px;
+    height: 66px;
     font-family: var(--primary-font);
     font-size: 14px;
     color: #060A24;
@@ -136,26 +146,23 @@
     margin-top: 0px;
     font-size: 14px;
   }
-  .bienvenida button {
+  .bienvenida .conoce_mas {
     top: -10px;
-    width: 288px;
+    min-width: 288px;
     height: 48px;
     margin: 0%;
+    padding-top: 4%;
   }
 }
 
-/*@mixin imgframe {
-    width: 100%;       
-    height:232px;
-    border:none;
-    
+/*Esta seccion contiene los siguientes elementos
+CONTENEDOR PRINCIPAL--.episodios
+TITULO DE SECCION--#titepisodes
+PODCAST SPOTIFY---iframe
 
-}*/
-/*Contenedor principal*/
+*/
 .episodios {
-  /*background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);*/
   background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
-  /*max-width: 1440px;*/
   height: 1042.6px;
   display: -ms-grid;
   display: grid;
@@ -189,7 +196,6 @@
   border: none;
   padding-left: 7.9%;
   padding-right: 7.9%;
-  /*@include imgframe();*/
   min-width: 298px;
 }
 
@@ -227,7 +233,6 @@
     margin-left: 1%;
     margin-right: 1.5%;
     margin-top: 2%;
-    /*margin-top: 4%;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -236,12 +241,16 @@
     -webkit-transform: unset;
             transform: unset;
     padding: unset;
-    /*padding-left: 3.9%;*/
   }
 }
 
+/*El HEADER incluye los elementos:
+CONTENEDOR PRINCIPAL--header
+LOGOTIPO---#logo, 
+MENU DE NAVEGACION---.menu, ul{li}, .checkbox__label , .checkbox 
+
+*/
 header {
-  /*max-width: 1440px;*/
   width: 100%;
   padding: 20px 120px 20px 20px;
   display: -webkit-box;
@@ -359,20 +368,17 @@ header .checkbox {
   }
 }
 
-.checkbox:checked ~
-.menu:after {
+.checkbox:checked ~ .menu:after {
   content: "x";
   font-family: var(--primary-font);
   top: 0%;
 }
 
-.checkbox:checked ~
-.menu {
+.checkbox:checked ~ .menu {
   overflow: visible;
 }
 
-.checkbox:checked ~
-.menu ul {
+.checkbox:checked ~ .menu ul {
   display: inline-block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -385,8 +391,7 @@ header .checkbox {
   width: 100vw;
 }
 
-.checkbox:checked ~
-.menu ul li {
+.checkbox:checked ~ .menu ul li {
   font-family: var(--primary-font);
   min-width: 300px;
   height: 22.9%;
@@ -396,11 +401,16 @@ header .checkbox {
   padding-left: 20px;
 }
 
-.checkbox:checked ~
-.menu ul li a {
+.checkbox:checked ~ .menu ul li a {
   color: whitesmoke;
 }
 
+/* Esta seccion contiene los siguientes elementos:
+CONTENEDOR PRINCIPAL---.invitados
+TITULO DE LA SECCION---#titinv
+IMAGENES DE LOS INVITADOS---.invitados img
+
+*/
 .invitados {
   width: 100%;
   position: relative;
@@ -426,7 +436,7 @@ header .checkbox {
 }
 
 .invitados img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   margin: 0%;
   padding: 0px;
@@ -443,7 +453,7 @@ header .checkbox {
         -ms-flex-direction: column;
             flex-direction: column;
     height: unset;
-    top: -55px;
+    top: -30px;
   }
   .invitados #titinv {
     width: 288px;
@@ -458,6 +468,13 @@ header .checkbox {
   }
 }
 
+/*Esta seccion se incluyen los siguientes elementos:
+TITULO DE SECCION---#titemas
+CONTENEDOR DE IMAGENES---.temas
+IMAGEN---.img
+NOMBRE DE LA IMAGEN---imgname
+
+*/
 #titemas {
   font-family: var(--secondary-font);
   font-size: 48px;
@@ -474,7 +491,6 @@ header .checkbox {
 .temas {
   position: relative;
   margin-top: 60px;
-  /*max-width: 1440px;*/
   height: auto;
   display: -ms-grid;
   display: grid;
@@ -567,8 +583,6 @@ header .checkbox {
     max-width: 288px;
     max-height: 64px;
     font-size: 24px;
-    /*padding-top: 10px;
-                    padding-bottom: 30px;*/
     margin-top: 10px;
     margin-bottom: 50px;
   }
@@ -579,6 +593,12 @@ header .checkbox {
   }
 }
 
+/* En esta seccion se incluyen los siguientes elementos:
+CONTENEDOR PRINCIPAL--.novedades
+TITULO DE SECCION---h2
+BOTON--.escucha 
+
+*/
 .novedades {
   border: 1px solid black;
   height: 418px;
@@ -613,9 +633,10 @@ header .checkbox {
   padding-top: 150px;
 }
 
-.novedades button {
+.novedades .escucha {
   background: #00F3BB;
   margin-top: 100px;
+  padding-top: 1.5%;
   border: none;
   outline: none;
   position: relative;
@@ -626,11 +647,12 @@ header .checkbox {
   letter-spacing: 0;
   text-align: center;
   line-height: 24px;
-  width: 345px;
+  min-width: 345px;
   height: 56px;
+  text-decoration: none;
 }
 
-.novedades button:hover {
+.novedades .escucha:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   color: white !important;
 }
@@ -657,9 +679,10 @@ header .checkbox {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .novedades button {
-    width: 288px;
+  .novedades .escucha {
+    min-width: 288px;
     height: 48px;
+    padding-top: 2.5%;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
     color: #060A24;
@@ -672,11 +695,17 @@ header .checkbox {
   }
 }
 
+/*En esta seccion se incluyen los siguientes elementos: 
+CONTENEDOR PRINCIPAL---footer
+CERTIFICADO VALIDA CSS---#certificado
+COPYRIGHT---#pfooter
+ICONOS DE REDES SOCIALES---.icons
+
+*/
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*max-width: 1440px;*/
   height: 80px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -754,6 +783,13 @@ footer .icons a {
   }
 }
 
+/*Esta seccion contiene los siguientes elementos:
+CONTENEDOR PRINCIPAL--.container_phone
+IMAGEN DE TELEFONO--#phone
+TITULO DE SECCION---#titus
+PARRAFO DE SECCION---#ourp
+
+*/
 .container_phone {
   position: relative;
   display: -ms-grid;
@@ -885,7 +921,6 @@ footer .icons a {
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /*max-width: 1440px;*/
 }
 
 ::-webkit-scrollbar {
@@ -898,7 +933,6 @@ footer .icons a {
 }
 
 .bodycontainer {
-  /*max-width: 1440px;*/
   width: 100vw;
   min-width: 320px;
   margin-top: 20px;
