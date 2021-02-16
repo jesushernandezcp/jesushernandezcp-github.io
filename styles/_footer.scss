@@ -1,59 +1,77 @@
-footer{
+/*En esta seccion se incluyen los siguientes elementos: 
+CONTENEDOR PRINCIPAL---footer
+CERTIFICADO VALIDA CSS---#certificado
+COPYRIGHT---#pfooter
+ICONOS DE REDES SOCIALES---.icons
+
+*/
+
+footer {
     display: flex;
-    /*max-width: 1440px;*/
-    height: 80px;    
-    justify-content:space-between;
-    align-items: center;
-    padding: 0px 50px 0px 50px;
-    
-#certificado{
-    display: block;
-
-    position: absolute;
-    visibility: hidden;}
-#pfooter{
-display: flex;    
-width: auto;
-height: auto;
-font-family: 'IBM Plex Mono', monospace;
-font-size: 16px;
-color: #060A24;
-letter-spacing: 0;
-line-height: 28px;
-
-}
-
-
-.icons{
-    display: flex;
-    height: 28px;
-    width: 220px;
+    height: 80px;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
-    color: #060A24;
-    letter-spacing: 0;
-    line-height: 28px;
-    
-    a{color: #060A24;}
-}
+    padding: 0px 50px 0px 50px;
+
+    #certificado {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    #pfooter {
+        display: flex;
+        width: auto;
+        height: auto;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 28px;
+
+    }
+
+
+    .icons {
+        display: flex;
+        height: 28px;
+        width: 220px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 28px;
+
+        a {
+            color: #060A24;
+        }
+    }
 }
 
-@media screen and (max-width: 600px)
-{
+@media screen and (max-width: 600px) {
 
-    footer{ 
+    footer {
         padding: unset;
         padding-top: 25px;
         min-width: 320px;
         flex-direction: column;
         justify-content: unset;
-        
-        .icons{margin-top: 15px; padding-bottom: 35px;}
 
-        #pfooter{min-width: 220px;}
-        #certificado{visibility: unset; position: relative;}
-        
-        
-            }
+        .icons {
+            margin-top: 15px;
+            padding-bottom: 35px;
+        }
+
+        #pfooter {
+            min-width: 220px;
+        }
+
+        #certificado {
+            visibility: unset;
+            position: relative;
+        }
+
+
+    }
 }

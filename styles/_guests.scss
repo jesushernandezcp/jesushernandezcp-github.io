@@ -1,49 +1,62 @@
+/* Esta seccion contiene los siguientes elementos:
+CONTENEDOR PRINCIPAL---.invitados
+TITULO DE LA SECCION---#titinv
+IMAGENES DE LOS INVITADOS---.invitados img
 
-@mixin imginvitados{
-    width: 100%;
+*/
+@mixin imginvitados {
+    max-width: 100%;
     height: 100%;
     margin: 0%;
-    
+
 }
-.invitados{
+
+.invitados {
     width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 1fr 1fr;
     height: auto;
-   
-    
-    #titinv{
+
+
+    #titinv {
         grid-column: 1/4;
         font-family: var(--secondary-font);
         font-size: 48px;
         justify-content: center;
         padding-left: 150px;
     }
-    
-}
-.invitados img{@include imginvitados();padding: 0px;}
 
-@media screen and (max-width: 540px)
-{
-    .invitados{
+}
+
+.invitados img {
+    @include imginvitados();
+    padding: 0px;
+}
+
+@media screen and (max-width: 540px) {
+    .invitados {
         display: flex;
         position: relative;
         flex-direction: column;
         height: unset;
-        top: -55px;
-        #titinv{
+        top: -30px;
+
+        #titinv {
             width: 288px;
-            padding: unset; 
-            height: 84px; 
+            padding: unset;
+            height: 84px;
             margin-left: 5%;
             font-size: 36px;
             margin-bottom: 7%;
         }
-        img{padding: unset;}
+
+        img {
+            padding: unset;
+        }
 
     }
-    
-    
+
+
 }

@@ -1,42 +1,48 @@
+/*Esta seccion incluye los siguientes elementos: 
+CONTENEDOR PRINCIPAL---.bienvenida
+TITULO BIENVENIDA---#hello,span 
+PARRAFO 1---#firstp 
+PARRAFO 2---#secondp
+BOTON---.conoce_mas
+*/
 
-/*Estilos del titulo*/
-
-.bienvenida{ 
+.bienvenida {
     display: flex;
     position: relative;
     flex-direction: column;
-    /*max-width: 1440px;*/
     margin-top: 10%;
     padding-left: 150px;
-    #hello{
-    
-        font-family:  'IBM Plex Sans', sans-serif;
+
+    #hello {
+        font-family: 'IBM Plex Sans', sans-serif;
         font-size: 64px;
         color: #060A24;
         letter-spacing: 0;
         text-align: left;
         width: auto;
-        
-        span{
-        
-            font-family:  'IBM Plex Sans', sans-serif;
+
+        span {
+
+            font-family: 'IBM Plex Sans', sans-serif;
             font-size: 64px;
             text-decoration: line-through;
             color: #060A24;
             letter-spacing: 0;
         }
-    
+
     }
-    
-    #hello::after{
+
+    #hello::after {
         font-family: IBMPlexSans;
         font-size: 64px;
         color: #0000EC;
         letter-spacing: 0;
-        content:".";
+        content: ".";
     }
-    #firstp{
-        
+
+    //PARRAFO QUE SE MUESTRA HASTA ALCANZAR UN MINIMO DE 531 pixeles APROX de VIEWPORT
+    #firstp {
+
         position: relative;
         font-family: var(--primary-font);
         font-size: 16px;
@@ -45,30 +51,27 @@
         line-height: 24px;
         display: flex;
         max-width: 628px;
-        
+
     }
 
-    #secondp{
+    //PARRAFO QUE PERMANECE OCULTO HASTA ALCANZAR UN MINIMO DE 531 pixeles APROX de VIEWPORT
+    #secondp {
         visibility: hidden;
-        
     }
 
-    
-    button{
-        /*propiedades del boton*/
-        border:none;
-        max-width: 255px;
+
+    //BOTON HECHO CON UNA ETIQUETA
+    .conoce_mas {
+        border: none;
+        width: fit-content;
+        min-width: 226px;
         max-height: 56px;
         min-height: 48px;
         background: #00F3BB;
         position: relative;
         margin-top: 1.4%;
         outline: transparent;
-        
-        
-        /*propiedades del texto*/
-        
-        padding: 0.4% 4.1%;
+        padding: 1.5% 4.1%;
         font-family: var(--primary-font);
         font-size: 18px;
         font-weight: bold;
@@ -76,78 +79,79 @@
         letter-spacing: 0;
         text-align: center;
         line-height: 24px;
-           
-        
+        text-decoration: none;
     }
-    button:hover{
+
+
+    .conoce_mas:hover {
         background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
         color: white !important;
-                  
+
     }
-    
-    
-    
+
+
 }
 
-@media screen and (max-width: 532px)
-{
+@media screen and (max-width: 532px) {
 
-
-    .bienvenida{
+    .bienvenida {
         display: flex;
         justify-content: space-evenly;
         margin-left: 15px;
-        width: 320px; 
+        width: 320px;
         height: 300px;
         font-size: 36px;
         padding: unset;
-        
-        #hello{
+
+        #hello {
             width: 250px;
             font-size: 36px;
-            
             line-height: 35px;
-            span{font-size: 36px;}
+
+            span {
+                font-size: 36px;
+            }
         }
-        #hello::after{
+
+        #hello::after {
             font-family: IBMPlexSans;
-            font-size: 64px;
+            font-size: 36px;
             color: black;
             letter-spacing: 0;
-            content:".";
+            content: ".";
         }
-            #firstp{
-                width: 288px; 
-                height: auto;
-                padding: 5px;
-                visibility: hidden;
-                font-size: 14px;
 
-            }
-            #secondp{
-                visibility: visible; 
-                position: absolute;
-                width: auto; 
-                height: auto;
-                font-family: var(--primary-font);
-                font-size: 14px;
-                color: #060A24;
-                letter-spacing: 0;
-                line-height: 22px;
-                
-                margin-top: 0px;
-                font-size: 14px;
-                
-            }
-            button{
-                top: -10px;
-                width: 288px;
-                height: 48px;
-                margin: 0%;
-                
-            }
-                
-        
-        
+        #firstp {
+            width: 288px;
+            height: auto;
+            padding: 5px;
+            visibility: hidden;
+            font-size: 14px;
+
         }
+
+        #secondp {
+            visibility: visible;
+            position: absolute;
+            display: flex;
+            max-width: 288px;
+            height: 66px;
+            font-family: var(--primary-font);
+            font-size: 14px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+            margin-top: 0px;
+            font-size: 14px;
+        }
+
+        .conoce_mas {
+            top: -10px;
+            min-width: 288px;
+            height: 48px;
+            margin: 0%;
+            padding-top: 4%;
+        }
+
+    }
 }

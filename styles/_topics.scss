@@ -1,6 +1,12 @@
-#titemas{
-        
-    font-family:var(--secondary-font);
+/*Esta seccion se incluyen los siguientes elementos:
+TITULO DE SECCION---#titemas
+CONTENEDOR DE IMAGENES---.temas
+IMAGEN---.img
+NOMBRE DE LA IMAGEN---imgname
+
+*/
+#titemas {
+    font-family: var(--secondary-font);
     font-size: 48px;
     display: flex;
     position: relative;
@@ -9,90 +15,110 @@
     padding-left: 220px;
     margin-top: 50px;
 }
-.temas{
-    position: relative; 
+
+.temas {
+    position: relative;
     margin-top: 60px;
-    /*max-width: 1440px;*/
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-right: 200px;
     padding-left: 220px;
-    
-    
-    
-    
-    .imgname{ 
+
+
+
+
+    .imgname {
         max-width: 220px;
-        font-family:  'IBM Plex Sans', sans-serif;
+        font-family: 'IBM Plex Sans', sans-serif;
         font-size: 24px;
         text-align: center;
-        
         justify-self: center;
     }
 
-    .img{
-        
+    .img {
         width: 104px;
         height: 104px;
-        margin: 0%;    
-        justify-self: center;        
-    
+        margin: 0%;
+        justify-self: center;
+
     }
-    
-    
-   
+
+
+
 }
 
-@media screen and (max-width: 800px)
-{
-    
-    
-    .item:first-child{order: 1;}
-    .item:nth-child(5){order:2;}
-    .item:nth-child(2){order: 3;}
-    .item:nth-child(6){order: 4;}
-    .item:nth-child(3){order: 5;}
-    .item:nth-child(7){order: 6;}
-    .item:nth-child(4){order: 7;}
-    .item:nth-child(8){order: 8;}
+@media screen and (max-width: 800px) {
+
+    //INSTRUCCION PARA MODIFICAR EL ORDEN DE LAS IMAGENES Y SUS NOMBRES, CUANDO SON DESPLEGADOS EN COLUMNA.
+
+    .item:first-child {
+        order: 1;
+    }
+
+    .item:nth-child(5) {
+        order: 2;
+    }
+
+    .item:nth-child(2) {
+        order: 3;
+    }
+
+    .item:nth-child(6) {
+        order: 4;
+    }
+
+    .item:nth-child(3) {
+        order: 5;
+    }
+
+    .item:nth-child(7) {
+        order: 6;
+    }
+
+    .item:nth-child(4) {
+        order: 7;
+    }
+
+    .item:nth-child(8) {
+        order: 8;
+    }
 
 
 
-#titemas{
+    #titemas {
         min-width: 288px;
         min-height: 84px;
         font-size: 36px;
         padding: unset;
         margin-left: 5%;
         margin-top: 9%;
-            
+
     }
-    .temas{
+
+    .temas {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: unset;
-        
-            
 
-                .imgname{ 
-                    max-width: 288px; 
-                    max-height: 64px; 
-                    font-size: 24px;
-                    /*padding-top: 10px;
-                    padding-bottom: 30px;*/
-                    margin-top: 10px;
-                    margin-bottom: 50px; 
-                
-                    
-                }
-                .img{
-                    width: 104px; 
-                    height: 104px;
-                    padding: unset;
-                }
-            }
-            
+
+
+        .imgname {
+            max-width: 288px;
+            max-height: 64px;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 50px;
+
+
         }
-    
+
+        .img {
+            width: 104px;
+            height: 104px;
+            padding: unset;
+        }
+    }
+
+}

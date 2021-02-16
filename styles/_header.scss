@@ -1,91 +1,103 @@
+/*El HEADER incluye los elementos:
+CONTENEDOR PRINCIPAL--header
+LOGOTIPO---#logo, 
+MENU DE NAVEGACION---.menu, ul{li}, .checkbox__label , .checkbox 
 
-header{
-    /*max-width: 1440px;*/
+*/
+
+header {
     width: 100%;
     padding: 20px 120px 20px 20px;
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
-    
-    
-    #logo{
+
+
+    #logo {
         margin-left: 60px;
         width: 36px;
         height: 36px;
-        }
-
-    .checkbox__label{visibility: hidden;}
-    .checkbox{visibility: hidden;}
-    
-        }
-
-    
-    
-    
-    .menu{
-        
-        display: flex;
-        
-        justify-content: right;
-        ul{
-            
-            a:hover{color: #00F3BB; text-decoration: line-through;}
-            a:active{color: rgba(6,10,36,0.56); text-decoration: line-through;}
-            li{ 
-                display: inline-flex;
-                font-family: var(--primary-font);
-                color: #060A24;
-                letter-spacing: 0;
-                line-height: 28px;
-                padding-right: 50px;    
-                
-                a{
-                    text-decoration: none;
-                    color: #060A24;
-                    
-                }
-            }        
-        }
     }
 
+    //LABEL Y CHECKBOX QUE PERMANECEN OCULTOS HASTA QUE EL VIEWPORT ALCANCE TAMAÑOS REDUCIDOS
 
-    
-    .menu:after{
-        content: "☰";
+    .checkbox__label {
         visibility: hidden;
-        
-      }
-      
-       
+    }
 
-        
-    
+    .checkbox {
+        visibility: hidden;
+    }
 
+}
+
+.menu {
+
+    display: flex;
+
+    justify-content: right;
+
+    ul {
+
+        a:hover {
+            color: #00F3BB;
+            text-decoration: line-through;
+        }
+
+        a:active {
+            color: rgba(6, 10, 36, 0.56);
+            text-decoration: line-through;
+        }
+
+        li {
+            display: inline-flex;
+            font-family: var(--primary-font);
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 28px;
+            padding-right: 50px;
+
+            a {
+                text-decoration: none;
+                color: #060A24;
+
+            }
+        }
+    }
+}
+
+
+//IMAGEN DE MENU HAMBURGUESA QUE PERMANECE OCULTA HASTA QUE EL VIEWPORT ALCANCE TAMAÑOS REDUCIDOS
+
+.menu:after {
+    content: "☰";
+    visibility: hidden;
+
+}
 
 
 //CONFIGURACION PARA MOBILE
 
-@media screen and (max-width: 812px)
-{
-    header{
+@media screen and (max-width: 812px) {
+    header {
         min-width: 320px;
         padding: unset;
         padding-left: 20px;
         padding-right: 20px;
         align-items: unset;
-        
-        #logo{
+
+        #logo {
             margin-left: 0px;
             width: 24px;
             height: 24px;
-            }
+        }
 
-        
 
-        .checkbox__label{
+
+        .checkbox__label {
             visibility: unset;
-            position: absolute; 
+            position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
@@ -96,11 +108,9 @@ header{
             margin: 0;
             z-index: 100;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            
-                        
-            
-        }    
-        .menu:after{
+        }
+
+        .menu:after {
             content: "☰";
             font-size: 1.5em;
             width: 14px;
@@ -113,60 +123,53 @@ header{
             margin-top: -6px;
             margin-left: -4px;
             visibility: visible;
-            
-            }
 
-        ul{
+        }
+
+        ul {
             margin-top: 10px;
             display: none;
-            
+
         }
-            
-            
-        }
-        
-        
+
+
+    }
+
+
 }
-    
 
 
-    
-.checkbox:checked ~ 
-                .menu:after {
-                                    content: "x";
-                                    font-family: var(--primary-font);    
-                                    top: 0%;
 
 
-                                }
-   
-.checkbox:checked ~ 
-                .menu {
-                            overflow: visible;  
-                            
-                            
-                            ul{
-                                display:inline-block; 
-                                flex-direction: column;
-                                background: #0000EC;
-                                color: white;
-                                transform: translate(-57px,20%);
-                                width: 100vw;
-                                
-                                    
-                                
-                                li{ 
-                                    font-family: var(--primary-font);
-                                    min-width: 300px;
+.checkbox:checked~.menu:after {
+    content: "x";
+    font-family: var(--primary-font);
+    top: 0%;
+}
 
-                                    height: 22.9%;
-                                    font-size: 16px;
-                                    
-                                    letter-spacing: 0;
-                                    line-height: 48px;    
-                                    padding-left: 20px;
-                                    
-                                    a{color: whitesmoke;}
-                                }
-                                }
-                            }
+.checkbox:checked~.menu {
+    overflow: visible;
+
+    ul {
+        display: inline-block;
+        flex-direction: column;
+        background: #0000EC;
+        color: white;
+        transform: translate(-57px, 20%);
+        width: 100vw;
+
+        li {
+            font-family: var(--primary-font);
+            min-width: 300px;
+            height: 22.9%;
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 48px;
+            padding-left: 20px;
+
+            a {
+                color: whitesmoke;
+            }
+        }
+    }
+}
